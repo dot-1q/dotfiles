@@ -1,0 +1,10 @@
+/* Rofi config file */
+configuration {
+    lines: 12;
+    font: "hack 10";
+    show-icons: true;
+    theme: ".config/rofi/themes/onedark";
+    display-window: "Window";
+    display-drun: "Search";
+}
+@import "/usr/share/rofi/themes/android_notification.rasi"
