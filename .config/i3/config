@@ -231,7 +231,7 @@ set $urgent-bg-color     #E53935
 #}
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #fb7035 #fb7035 #ffffff #fc2523   #fb7035
+client.focused          #fd5b67 #fd5b67 #ffffff #752b30   #fd5b67
 client.focused_inactive #617d9e #617d9e #ffffff #424f5f   #617d9e
 client.unfocused        #424f5f #424f5f #83a5bc #424f5f   #424f5f
 
@@ -245,9 +245,9 @@ bindsym $mod+t exec gnome-control-center
 #for_window [class="Yad"] floating enable   # not used, was for i3blocks
 
 # Window Compositor (transparency)
-exec_always picom --config .config/picom/picom.conf
+exec_always picom --config .config/picom/picom.conf --experimental-backends
 
-exec_always feh --bg-scale /home/tiago/walls/mountain.png
+exec_always feh --bg-fill /home/tiago/walls/astro3.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec polychromatic-tray-applet
 exec redshift
