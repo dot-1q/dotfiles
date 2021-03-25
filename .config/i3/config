@@ -24,7 +24,7 @@ font pango:FiraCode-Regular 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --ignore-sleep --i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -140,6 +140,7 @@ assign [class="discord"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Spotify"] $ws5
+assign [class="zoom"] $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -249,8 +250,8 @@ exec_always picom --config .config/picom/picom.conf --experimental-backends
 
 exec_always feh --bg-fill /home/tiago/walls/astro3.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-#exec polychromatic-tray-applet
+exec blueman-applet
+exec polychromatic-tray-applet
 exec redshift
-exec slack
 exec discord
 

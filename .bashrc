@@ -128,7 +128,7 @@ export BASH_IT="/home/tiago/.bash_it"
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/
-export BASH_IT_THEME='modern'
+export BASH_IT_THEME='purity'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
@@ -191,3 +191,10 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+if [ -d /opt/pic32mx/bin ] ; then     
+	export PATH=$PATH:/opt/pic32mx/bin 
+fi 
+
+alias java8="/usr/lib/jvm/java-8-openjdk-amd64/bin/java"
+alias sudo="sudo "

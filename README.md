@@ -13,4 +13,4 @@
 
 ### How it looks:
 
-![image](ws.png)
+![image](ws.gif)
