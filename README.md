@@ -7,8 +7,8 @@
 - [picom](https://github.com/yshui/picom)
 - [redshift](https://github.com/jonls/redshift)
 - [bash-it](https://github.com/Bash-it/bash-it) config
-- [GTK3 Theme](https://www.gnome-look.org/p/1381832/) (not included)
-
+- [GTK3 Theme](https://www.gnome-look.org/p/1381832/) (not included) 
+- [Terminal color theme](https://mayccoll.github.io/Gogh/) (_bash)
 <br>
 
 ### How it looks:
