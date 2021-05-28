@@ -17,7 +17,6 @@ set scrolloff=10
 set relativenumber
 set laststatus=2
 set noshowmode
-set termguicolors
 
 " esc in insert mode
 inoremap kj <esc>
@@ -189,8 +188,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'liuchengxu/space-vim-dark'
 call plug#end()
-
 
 let g:lightline = {
 	\ 'colorscheme': 'material',
@@ -204,4 +204,5 @@ let g:lightline = {
 \ }
 
 colorscheme onedark 
+set termguicolors
 hi Normal guibg=NONE ctermbg=NONE

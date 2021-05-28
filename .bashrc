@@ -199,3 +199,4 @@ fi
 alias java8="/usr/lib/jvm/java-8-openjdk-amd64/bin/java"
 alias sudo="sudo "
 alias nv="/usr/bin/nvim"
+alias pr="cd ~/Github/WIFI\ Monitor/Project/project"

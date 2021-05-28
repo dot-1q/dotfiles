@@ -84,8 +84,8 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# toggle tiling / floating  | also disable borders on toggled floating windows
+bindsym $mod+Shift+space floating toggle border none
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -137,6 +137,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Firefox"] $ws1
 assign [class="Slack"] $ws2
 assign [class="discord"] $ws2
+assign [class="Chat | Microsoft Teams"] $ws2
+assign [class="Microsoft Teams"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Spotify"] $ws5
@@ -180,13 +182,14 @@ bindsym $mod+r mode "resize"
 
 #Needed for i3-gaps
 #hide_edge_borders both
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
+for_window [class="Gnome-terminal"] border pixel 0
+for_window [class="Org.gnome.Nautilus"] border pixel 0
 
-#smart_gaps on
+smart_gaps on
 hide_edge_borders smart
 
 # Global gaps
-gaps outer 5
 gaps inner 5
 
 # Lock screen keybind
@@ -232,7 +235,7 @@ set $urgent-bg-color     #E53935
 #}
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #fd5b67 #fd5b67 #ffffff #752b30   #fd5b67
+client.focused          #4545a8 #4545a8 #ffffff #752b30   #4545a8
 client.focused_inactive #617d9e #617d9e #ffffff #424f5f   #617d9e
 client.unfocused        #424f5f #424f5f #83a5bc #424f5f   #424f5f
 
@@ -248,10 +251,10 @@ bindsym $mod+t exec gnome-control-center
 # Window Compositor (transparency)
 exec_always picom --config .config/picom/picom.conf --experimental-backends
 
-exec_always feh --bg-fill /home/tiago/walls/astro3.jpg
+exec_always feh --bg-fill /home/tiago/walls/head.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec blueman-applet
 exec polychromatic-tray-applet
 exec redshift
 exec discord
-
+exec teams
