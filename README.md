@@ -7,7 +7,6 @@
 - Navigation Hotkeys: [skhd](https://github.com/koekeishiya/skhd)
 - Terminal: [Iterm2](https://iterm2.com)
 - Terminal Colorscheme: [One Dark](https://github.com/joshdick/onedark.vim)
-<br>
 
 ### How it looks:
 
