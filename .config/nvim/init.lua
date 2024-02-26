@@ -268,6 +268,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      "nvim-treesitter/nvim-treesitter-context"
     },
     build = ':TSUpdate',
   },
@@ -285,7 +286,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
-  
+  --
   -- Autopairs for autocopleting brackets and braces
   {
       'windwp/nvim-autopairs',
@@ -293,7 +294,7 @@ require('lazy').setup({
       config = true
       -- use opts = {} for passing setup options
       -- this is equalent to setup({}) function
-  }
+  },
 }, {})
 
 -- [[ Setting options ]]
@@ -312,7 +313,7 @@ vim.o.mouse = 'a'
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+-- vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -450,7 +451,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'yaml', 'json' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -516,6 +517,22 @@ vim.defer_fn(function()
       },
     },
   }
+  -- ADD CONTEXT FOR METHODS --
+  require'treesitter-context'.setup{
+    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+    min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+    line_numbers = true,
+    multiline_threshold = 20, -- Maximum number of lines to show for a single context
+    trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+    mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+    -- Separator between context and content. Should be a single character string, like '-'.
+    -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+    separator = nil,
+    zindex = 20, -- The Z-index of the context window
+    on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+  }
+
 end, 0)
 
 -- [[ Configure LSP ]]
@@ -602,6 +619,7 @@ local servers = {
   pyright = {},
   dockerls = {},
   helm_ls = {},
+  yamlls = {},
   typos_lsp = {
     config = {
           -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
@@ -716,17 +734,17 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
--- [[[[[[[[                       ]]]]]]]]
--- [[[[[[[[                       ]]]]]]]]
--- [[[[[[[[ MY OWN CONFIG CHANGES ]]]]]]]]
--- [[[[[[[[                       ]]]]]]]]
--- [[[[[[[[                       ]]]]]]]]
-
+-- My own config changes
+--
 -- Add 'jk' and 'kj' keys to exit insert mode
 local options = { noremap = true }
 vim.keymap.set("i", "kj", "<Esc>", options)
 vim.keymap.set("i", "jk", "<Esc>", options)
-
+-- Remap to add 'zz' to the half page up/down commands to center them
+vim.keymap.set({"v","n"}, '<C-u>', '<C-u>zz')
+vim.keymap.set({"v","n"}, '<C-d>', '<C-d>zz')
+-- Paste with leader so we dont lose whats being pasted (on the buffer)
+vim.keymap.set("v",'<leader>p', "\"_dP")
 -- Add relative line numbers
 vim.o.relativenumber=true
 vim.o.scrolloff=15
