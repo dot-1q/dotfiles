@@ -2,6 +2,7 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
 return {
   -- Add Autopairs for normal text and for lsp autocompletion
   {
@@ -16,5 +17,18 @@ return {
     end,
   },
   -- Add vim-fugitive for git actions
-  { 'tpope/vim-fugitive' },
+  -- { 'tpope/vim-fugitive' },
+
+  -- Add and customize lualine Statusline
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('lualine').setup {
+        options = {
+          theme = 'no-clown-fiesta',
+        },
+      }
+    end,
+  },
 }

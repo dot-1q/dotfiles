@@ -6,7 +6,8 @@
 - Window Manager: [yabai](https://github.com/koekeishiya/yabai)
 - Navigation Hotkeys: [skhd](https://github.com/koekeishiya/skhd)
 - Terminal: [Iterm2](https://iterm2.com)
-- Terminal Colorscheme: [One Dark](https://github.com/joshdick/onedark.vim)
+- Terminal Colorscheme: [Gruvbox Dark](https://iterm2colorschemes.com)
+- Neovim Colorscheme: [No Clown Fiesta](https://github.com/aktersnurra/no-clown-fiesta.nvim/)
 
 ### How it looks:
 
