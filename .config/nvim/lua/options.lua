@@ -73,4 +73,19 @@ vim.opt.swapfile = false
 -- Signs column
 vim.opt.signcolumn = 'yes'
 
+-- Add borders to the floating windows, used for the hovered documentation from the lsp and diagnostics
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = 'rounded',
+})
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = 'rounded',
+})
+
+vim.diagnostic.config {
+  virtual_text = false,
+  float = {
+    border = 'rounded',
+  },
+}
+
 -- vim: ts=2 sts=2 sw=2 et

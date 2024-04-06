@@ -7,7 +7,8 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'no-clown-fiesta',
+          -- theme = 'no-clown-fiesta',
+          theme = 'gruvbox',
         },
       }
     end,

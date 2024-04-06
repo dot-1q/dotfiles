@@ -39,6 +39,13 @@ return {
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
+
+      -- Add a border around the documentation of the auto complete command
+      cmp.setup {
+        window = {
+          documentation = cmp.config.window.bordered(),
+        },
+      }
       luasnip.config.setup {}
 
       cmp.setup {

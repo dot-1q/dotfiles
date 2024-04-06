@@ -16,7 +16,7 @@ return {
           lsp = { underline = true },
         },
       }
-      vim.cmd.colorscheme 'no-clown-fiesta'
+      -- vim.cmd.colorscheme 'no-clown-fiesta'
       vim.cmd.hi 'Comment gui=none'
     end,
   },
