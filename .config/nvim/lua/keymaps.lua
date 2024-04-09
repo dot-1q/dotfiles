@@ -70,4 +70,7 @@ vim.keymap.set('n', '<leader>tt', function()
     vim.diagnostic.hide()
   end
 end, { desc = 'Toggle Diagnostics' })
+-- Keymap to change the spell check suggestions
+-- vim.keymap.set({ 'v', 'n' }, '<leader>l', 'z=', { desc = 'Show list of suggested corrections', remap = true })
+
 -- vim: ts=2 sts=2 sw=2 et

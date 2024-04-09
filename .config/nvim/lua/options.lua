@@ -81,8 +81,8 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.s
   border = 'rounded',
 })
 
+-- Enable border on the diagnostics window
 vim.diagnostic.config {
-  virtual_text = false,
   float = {
     border = 'rounded',
   },

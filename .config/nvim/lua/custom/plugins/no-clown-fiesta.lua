@@ -1,6 +1,7 @@
 return {
   {
     'aktersnurra/no-clown-fiesta.nvim',
+    enabled = false,
     lazy = false,
     priority = 1000,
     init = function()
@@ -16,7 +17,7 @@ return {
           lsp = { underline = true },
         },
       }
-      -- vim.cmd.colorscheme 'no-clown-fiesta'
+      vim.cmd.colorscheme 'no-clown-fiesta'
       vim.cmd.hi 'Comment gui=none'
     end,
   },

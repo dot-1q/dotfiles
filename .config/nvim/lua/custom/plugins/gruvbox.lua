@@ -16,9 +16,11 @@ return {
         },
         transparent_mode = true,
         overrides = {
-          LspReferenceText = { bg = '#665c54' },
-          LspReferenceRead = { bg = '#665c54' },
-          LspReferenceWrite = { bg = '#665c54' },
+          -- I don't like how gruvbox highlights matching words under cursor.
+          -- So I remap that highlight to the one similar to Selecting Text (Visual mode).
+          LspReferenceText = { link = 'Visual' },
+          LspReferenceRead = { link = 'Visual' },
+          LspReferenceWrite = { link = 'Visual' },
         },
       }
     end,
