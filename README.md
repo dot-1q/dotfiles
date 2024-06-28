@@ -1,7 +1,6 @@
 # `[tiago] ~/`
 
 ### How it looks:
-
 ![image](ws.png)
 
 ### What's being used:
