@@ -1,5 +1,9 @@
 # `[tiago] ~/`
 
+### How it looks:
+
+![image](ws.png)
+
 ### What's being used:
 - IDE/Dev environment: [neovim](https://neovim.io)
 - Neovim Initial Setup: [Kickstart](https://github.com/nvim-lua/kickstart.nvim), but it is now [modularized](https://github.com/dam9000/kickstart-modular.nvim)
@@ -8,10 +12,6 @@
 - Terminal Colorscheme: [Gruvbox Material](https://github.com/alacritty/alacritty-theme/blob/master/themes/gruvbox_material_hard_dark.toml)
 - Neovim Colorscheme: [Gruvbox Material](https://github.com/f4z3r/gruvbox-material.nvim)
 - Zsh Theme: [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
-### How it looks:
-
-![image](ws.png)
 
 ### Notes:
 
