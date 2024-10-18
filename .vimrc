@@ -66,5 +66,7 @@ inoremap jk <esc>
 " Scroll page up and down and recenter with zz
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
-" Set this to true or false, depending if Ubuntu or MacOS
+
+" Comment next line if Ubuntu and uncomment the background one
 set termguicolors
+" hi Normal guibg=NONE ctermbg=NONE
