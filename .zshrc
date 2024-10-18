@@ -115,16 +115,22 @@ source <(kubectl completion zsh)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias k=kubectl
-alias vi=nvim
-alias v=nvim
+alias 'k'=kubectl
+alias 'kp'="kubectl get pods -n "
+alias 'p'="python3"
+alias 'n'="nvim"
+alias 'v'="vim"
 alias '?'=duck
 alias '??'=groq
 alias '???'=google
-alias 'de'=deactivate
-alias 'c'=clear
+alias 'de'="deactivate"
+alias 'c'="clear"
 alias 'h'="cd ~/"
 alias 'conf'="cd ~/.config/nvim/"
+alias 'wa'="watch"
+alias df='df -h'
+alias diff="diff --color"
+alias gitl="git log -n 5 --graph --oneline"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
