@@ -20,7 +20,6 @@ set noshowmode
 set t_Co=256
 set noignorecase
 set clipboard=unnamed
-set termguicolors
 set wildmenu
 set wildmode=longest:full,full
 
@@ -67,3 +66,5 @@ inoremap jk <esc>
 " Scroll page up and down and recenter with zz
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+" Set this to true or false, depending if Ubuntu or MacOS
+set termguicolors
