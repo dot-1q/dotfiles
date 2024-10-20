@@ -1,8 +1,8 @@
 syntax on
 
 set noerrorbells
-set tabstop=4 softtabstop=4
 set shiftwidth=4
+set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
 set number
@@ -13,12 +13,12 @@ set undodir=~/.config/vim/undodir
 set undofile
 set incsearch
 set hlsearch
-set scrolloff=15
 set relativenumber
 set laststatus=2
 set noshowmode
 set t_Co=256
 set noignorecase
+set scrolloff=15
 set clipboard=unnamed
 set wildmenu
 set wildmode=longest:full,full
@@ -37,22 +37,13 @@ Plug 'matze/vim-move'
 Plug 'romainl/vim-cool'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " vim-move config
 let g:move_key_modifier = 'C'
 let g:move_key_modifier_visualmode = 'C'
-
-" Gruvbox material config
-set background=dark
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_better_performance = 1
-colorscheme gruvbox-material
-" Lightline configuration
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
-      \ }
 
 " Highlight region on yank
 let g:highlightedyank_highlight_duration = 100
@@ -66,6 +57,22 @@ inoremap jk <esc>
 " Scroll page up and down and recenter with zz
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+
+" Change cursor to line or block depending on insert or normal mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+
+" Gruvbox material config
+set background=dark
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_better_performance = 1
+
+colorscheme gruvbox-material
+" Lightline configuration
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox_material',
+      \ }
 
 " Comment next line if Ubuntu and uncomment the background one
 set termguicolors
