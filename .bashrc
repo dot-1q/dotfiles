@@ -21,7 +21,7 @@ __ps1() {
         [[ -n "$B" ]] && B="$g($b$B$g)"
 
         short="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B$p$P$x "
-        long="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$\w$B\n$g╚ $e$P$x "
+        long="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B\n$e$P$x "
         double="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$\w\n$g║ $B\n$g╚ $p$P$x "
 
         if ((${#countme} > PROMPT_MAX)); then
