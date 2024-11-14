@@ -42,6 +42,7 @@ alias 'de'="deactivate"
 alias 'c'="clear"
 alias 'h'="cd ~/"
 alias 'v'="vi"
+alias lh="ls -ahl"
 alias free='free -h'
 alias tree='tree -a'
 alias df='df -h'
