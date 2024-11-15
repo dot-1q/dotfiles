@@ -29,7 +29,7 @@ I've also tried some tmux themes to customize the status bar, but they are all t
 color palette. I also put a `battery` and `network` script so that it shows that information in the status bar.
 Because of that, I only have 2 tmux plugins. One for saving and resurrecting sessions, and the other one simply adds some icons to the window's names.
 
-Changed iTerm2 to Alacritty just because. It's just slightly faster when displaying text. Not much else to it. Configuration is more config-based, which I also prefer.
+Changed iTerm2 to Alacritty just because. It's just slightly faster when displaying text. Not much else to it. Configuration is more config file based, which I also prefer.
 
 Added p10k as the Zsh shell theme and configured it via `p10k configure`. Its very easy to configure, fast and not very noisy.
 
