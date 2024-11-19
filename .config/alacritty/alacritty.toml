@@ -6,12 +6,12 @@ import = ["~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"]
 TERM = "xterm-256color"
 
 [window]
-# decorations = "buttonless"
+#decorations = "buttonless"
 dynamic_padding = true
 startup_mode= 'Fullscreen'
 
 [font]
-size = 13.0
+size = 15.5
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -31,3 +31,14 @@ style = "Bold Italic"
 
 [mouse]
 hide_when_typing = true
+
+[cursor]
+style = "Block"
+vi_mode_style = "Block"
+
+# Map 'Command+a' to 'Ctrl-b'. This is usefull to remap the tmux default
+# prefix command to a more ergonomic position.
+[[keyboard.bindings]]
+chars = "\u0002"
+key = "a"
+mods = "Command"
