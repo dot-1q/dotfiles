@@ -1,4 +1,5 @@
 # ------------------------ INJECTED BY ME ------------------------------
+export KUBECONFIG=~/.kube/config
 PROMPT_LONG=20
 PROMPT_MAX=95
 PROMPT_AT=@
