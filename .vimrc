@@ -54,7 +54,7 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 inoremap kj <esc>
 inoremap jk <esc>
 " Decrease the wait time between the escape sequence.
-set timeoutlen=100
+set timeoutlen=250
 
 " Scroll page up and down and recenter with zz
 nnoremap <C-d> <C-d>zz
