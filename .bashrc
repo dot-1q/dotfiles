@@ -55,3 +55,7 @@ set -o vi
 
 bind -m vi-insert '"jk":vi-movement-mode'
 bind -m vi-insert '"kj":vi-movement-mode'
+
+#Export locales
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
