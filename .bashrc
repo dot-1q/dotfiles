@@ -76,6 +76,16 @@ PROMPT_LONG=20
 PROMPT_MAX=95
 PROMPT_AT=@
 
+detect_venv() {
+        pv=""
+        # Detect python venv
+        if [[ -n "${CONDA_DEFAULT_ENV}" ]]; then
+                pv="($PYTHON_VENV_CHAR${CONDA_DEFAULT_ENV}) "
+        elif [[ -n "${VIRTUAL_ENV}" ]]; then
+                pv="($PYTHON_VENV_CHAR$(basename "${VIRTUAL_ENV}")) "
+        fi
+}
+
 __ps1() {
         local P='$' dir="${PWD##*/}" B countme short long double \
                 r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[34m\]' \
@@ -93,9 +103,11 @@ __ps1() {
         [[ $B == master || $B == main ]] && b="$r"
         [[ -n "$B" ]] && B="$g($b$B$g)"
 
-        short="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B$p$P$x "
-        long="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B\n$e$P$x "
-        double="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$\w\n$g║ $B\n$g╚ $p$P$x "
+        detect_venv # Check if we are in a python virtual env
+
+        short="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B $e$pv$p$P$x "
+        long="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B\n$e$pv$P$x "
+        double="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$\w\n$g║ $B \n$g╚$e$pv$p$P$x "
 
         if ((${#countme} > PROMPT_MAX)); then
                 PS1="$double"
