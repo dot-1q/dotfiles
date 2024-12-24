@@ -72,7 +72,7 @@ if ! shopt -oq posix; then
 fi
 
 export KUBECONFIG=~/.kube/config
-PROMPT_LONG=20
+PROMPT_LONG=30
 PROMPT_MAX=95
 PROMPT_AT=@
 
@@ -80,9 +80,9 @@ detect_venv() {
         pv=""
         # Detect python venv
         if [[ -n "${CONDA_DEFAULT_ENV}" ]]; then
-                pv="($PYTHON_VENV_CHAR${CONDA_DEFAULT_ENV}) "
+                pv=" ($PYTHON_VENV_CHAR${CONDA_DEFAULT_ENV})"
         elif [[ -n "${VIRTUAL_ENV}" ]]; then
-                pv="($PYTHON_VENV_CHAR$(basename "${VIRTUAL_ENV}")) "
+                pv=" ($PYTHON_VENV_CHAR$(basename "${VIRTUAL_ENV}"))"
         fi
 }
 
@@ -101,20 +101,19 @@ __ps1() {
         countme="$USER$PROMPT_AT$(hostname):$dir($B)\$ "
 
         [[ $B == master || $B == main ]] && b="$r"
-        [[ -n "$B" ]] && B="$g($b$B$g)"
+        [[ -n "$B" ]] && B=" $b($B)"
 
         detect_venv # Check if we are in a python virtual env
 
-        short="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B $e$pv$p$P$x "
-        long="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B\n$e$pv$P$x "
-        double="$e╔ $u\u$e$PROMPT_AT$h\h$e:$w$\w\n$e║ $B \n$e╚$e$pv$p$P$x "
-
         if ((${#countme} > PROMPT_MAX)); then
-                PS1="$double"
+                # Doube line prompt
+                PS1="$e╔ $\uu$g$PROMPT_AT$h\h$e:$w$\w\n$e║ $B \n$e╚$e$pv$p$P$x "
         elif ((${#countme} > PROMPT_LONG)); then
-                PS1="$long"
+                # Text on next line (long)
+                PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv\n$P$x "
         else
-                PS1="$short"
+                # Text on same line (short)
+                PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv$p$P$x "
         fi
 }
 
