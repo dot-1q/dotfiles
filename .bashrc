@@ -105,9 +105,9 @@ __ps1() {
 
         detect_venv # Check if we are in a python virtual env
 
-        short="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B $e$pv$p$P$x "
-        long="$u\u$g$PROMPT_AT$h\h$g:$w$\w$B\n$e$pv$P$x "
-        double="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$\w\n$g║ $B \n$g╚$e$pv$p$P$x "
+        short="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B $e$pv$p$P$x "
+        long="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B\n$e$pv$P$x "
+        double="$e╔ $u\u$e$PROMPT_AT$h\h$e:$w$\w\n$e║ $B \n$e╚$e$pv$p$P$x "
 
         if ((${#countme} > PROMPT_MAX)); then
                 PS1="$double"
