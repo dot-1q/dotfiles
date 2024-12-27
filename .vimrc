@@ -53,7 +53,6 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 " esc in insert mode
 inoremap kj <esc>
 inoremap jk <esc>
-" Decrease the wait time between the escape sequence.
 set timeoutlen=250
 
 " Scroll page up and down and recenter with zz
@@ -63,7 +62,6 @@ nnoremap <C-u> <C-u>zz
 " Change cursor to line or block depending on insert or normal mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
 
 " Gruvbox material config
 set background=dark
@@ -75,6 +73,9 @@ colorscheme gruvbox-material
 let g:lightline = {
       \ 'colorscheme': 'gruvbox_material',
       \ }
+
+" Reset cursor style when leaving Vim
+autocmd VimLeave * set guicursor=a:hor20
 
 " Comment next line if Ubuntu and uncomment the background one
 set termguicolors
