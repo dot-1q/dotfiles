@@ -6,9 +6,9 @@
 ### What's being used:
 - IDE/Dev environment: [neovim](https://neovim.io)
 - Neovim Initial Setup: [Kickstart](https://github.com/nvim-lua/kickstart.nvim), but it is now [modularized](https://github.com/dam9000/kickstart-modular.nvim)
-- Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
 - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
-- Terminal Colorscheme: [Gruvbox Material](https://github.com/alacritty/alacritty-theme/blob/master/themes/gruvbox_material_hard_dark.toml)
+- Terminal Colorscheme (ported): [Gruvbox Material](./.config/ghostty/config)
 - Neovim Colorscheme: [Gruvbox Material](https://github.com/f4z3r/gruvbox-material.nvim)
 - Zsh Theme: [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
