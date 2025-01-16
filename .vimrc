@@ -65,7 +65,6 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " Gruvbox material config
-set background=dark
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_better_performance = 1
 
@@ -79,5 +78,4 @@ let g:lightline = {
 autocmd VimLeave * set guicursor=a:hor20
 
 " Comment next line if Ubuntu and uncomment the background one
-"set termguicolors
-hi Normal guibg=NONE ctermbg=NONE
+set termguicolors
