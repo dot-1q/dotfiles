@@ -32,13 +32,14 @@ endif
 
 " Plugins Installed
 call plug#begin('~/.vim/plugged')
-Plug 'sainnhe/gruvbox-material'
-Plug 'matze/vim-move'
-Plug 'romainl/vim-cool'
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-commentary'
-Plug 'machakann/vim-highlightedyank'
+Plug 'sainnhe/gruvbox-material' " Vim Theme
+Plug 'matze/vim-move' " Move line(s) with Ctrl + h/j/k/l
+Plug 'romainl/vim-cool' " Disable hlsearch when done
+Plug 'itchyny/lightline.vim' " Vim status line theme
+Plug 'tpope/vim-vinegar' " File explorer inside VIM (netrw but better)
+Plug 'tpope/vim-commentary' " Comment line(s) with `gc` or `gcc`
+Plug 'machakann/vim-highlightedyank' " Highlight yanked selection
+Plug 'vimpostor/vim-lumen' " Sync background with terminal colors
 call plug#end()
 
 " vim-move config
@@ -78,5 +79,5 @@ let g:lightline = {
 autocmd VimLeave * set guicursor=a:hor20
 
 " Comment next line if Ubuntu and uncomment the background one
-set termguicolors
-" hi Normal guibg=NONE ctermbg=NONE
+"set termguicolors
+hi Normal guibg=NONE ctermbg=NONE
