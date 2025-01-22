@@ -77,5 +77,4 @@ let g:lightline = {
 " Reset cursor style when leaving Vim
 autocmd VimLeave * set guicursor=a:hor20
 
-" Comment next line if Ubuntu and uncomment the background one
 set termguicolors

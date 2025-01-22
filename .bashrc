@@ -136,5 +136,6 @@ alias gitl="git log -n 5 --graph --oneline"
 # Vi mode when typing
 set -o vi
 
+# Vi mode escape sequence
 bind -m vi-insert '"jk":vi-movement-mode'
 bind -m vi-insert '"kj":vi-movement-mode'
