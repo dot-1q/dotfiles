@@ -16,9 +16,9 @@
 
 #### My config is heavily influenced by [rwxrob](https://www.youtube.com/@rwxrob)!
 
-Because of it, I'm starting to have a more terminal-centric workflow. I can do quick internet searches from the terminal, to quickly look-up information and copy-paste if needed. I've also implemented an [AI query](https://groq.com) into
-my terminal via the alias `??`, which allows me to communicate with it very fast and get the answers I want even faster. AI is inevitable, get good or get left behind. Don't use it as a substitute to knowing the basics/fundamentals of anything, but DO USE IT as a personal assistant, 
-a Google search results formatter and aggregator.
+Because of it, I'm starting to have a more terminal-centric workflow. I can do quick internet searches from the terminal with lynx. I've also implemented an [AI query](https://groq.com) into
+my terminal via the alias `??`, which allows me to communicate with an LLM very fast and get the answers I want even faster. AI is inevitable, get good or get left behind. Don't use it as a substitute to knowing the basics/fundamentals of anything, but *DO USE IT* as a personal assistant, 
+a Google search results formatter and aggregator, with the obvious grain of salt, like any other information that's on the Internet.
 
 - No tiling window manager. I only tile the terminal and tmux is the best for that.
 - No bloated tmux conf. Only relies on a couple of simple scripts, and the remote version has 0 plugins.
