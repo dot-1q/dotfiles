@@ -39,7 +39,6 @@ Plug 'itchyny/lightline.vim' " Vim status line theme
 Plug 'tpope/vim-vinegar' " File explorer inside VIM (netrw but better)
 Plug 'tpope/vim-commentary' " Comment line(s) with `gc` or `gcc`
 Plug 'machakann/vim-highlightedyank' " Highlight yanked selection
-Plug 'vimpostor/vim-lumen' " Sync background with terminal colors
 call plug#end()
 
 " vim-move config
@@ -69,6 +68,7 @@ let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_better_performance = 1
 
 colorscheme gruvbox-material
+set background=dark
 " Lightline configuration
 let g:lightline = {
       \ 'colorscheme': 'gruvbox_material',
