@@ -21,6 +21,7 @@ my terminal via the alias `??`, which allows me to communicate with an LLM very 
 a Google search results formatter and aggregator, with the obvious grain of salt, like any other information that's on the Internet.
 
 - [Stripped down version](https://github.com/dot-1q/remote) for remote development/management. Simply clone and get going.
+- I frequently switch between ´gruvbox-material` and `rose-pine`. Due to my setup, I only have to update neovim's and ghostty's themes.
 - No tiling window manager. I only tile the terminal and tmux is the best for that.
 - No bloated tmux conf. Only relies on a couple of simple scripts, and the remote version has 0 plugins.
 - Ghostty because of the native automatic background detection for macOS.
