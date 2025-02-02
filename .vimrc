@@ -32,13 +32,14 @@ endif
 
 " Plugins Installed
 call plug#begin('~/.vim/plugged')
-Plug 'sainnhe/gruvbox-material' " Vim Theme
 Plug 'matze/vim-move' " Move line(s) with Ctrl + h/j/k/l
 Plug 'romainl/vim-cool' " Disable hlsearch when done
 Plug 'itchyny/lightline.vim' " Vim status line theme
 Plug 'tpope/vim-vinegar' " File explorer inside VIM (netrw but better)
 Plug 'tpope/vim-commentary' " Comment line(s) with `gc` or `gcc`
 Plug 'machakann/vim-highlightedyank' " Highlight yanked selection
+Plug 'sainnhe/gruvbox-material' " Vim Theme
+Plug 'rose-pine/vim' " Vim Theme
 call plug#end()
 
 " vim-move config
@@ -63,15 +64,17 @@ nnoremap <C-u> <C-u>zz
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Gruvbox material config
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_better_performance = 1
 
-colorscheme gruvbox-material
+" Gruvbox material config
+"let g:gruvbox_material_better_performance = 1
+"let g:gruvbox_material_background = 'hard'
+"colorscheme gruvbox-material
+colorscheme rosepine_moon
 set background=dark
 " Lightline configuration
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
+      "\ 'colorscheme': 'gruvbox_material',
+      \ 'colorscheme': 'rosepine',
       \ }
 
 " Reset cursor style when leaving Vim
