@@ -131,7 +131,7 @@ alias 'wa'="watch"
 alias df='df -h'
 alias diff="diff --color"
 alias gitl="git log -n 5 --graph --oneline"
-alias "rr"="sudo !!" #rerun last command as sudo
+alias 'rr'='sudo $(fc -ln -1)'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
